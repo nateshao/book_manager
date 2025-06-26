@@ -21,5 +21,10 @@ public class User {
     @Column(nullable = false)
     private String role; // ADMIN, USER
 
+    @Column(unique = true)
+    private String wechatOpenid;
+    private String nickname;
+    private String avatar;
+
     private LocalDateTime createTime;
 } 

@@ -8,4 +8,6 @@ public interface UserService {
     String login(String username, String password);
     Optional<User> findByUsername(String username);
     User getCurrentUser();
+    Optional<User> findByWechatOpenid(String openid);
+    User save(User user);
 } 

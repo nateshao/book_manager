@@ -51,4 +51,14 @@ public class UserServiceImpl implements UserService {
         String username = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return userRepository.findByUsername(username).orElseThrow();
     }
+
+    @Override
+    public Optional<User> findByWechatOpenid(String openid) {
+        return userRepository.findByWechatOpenid(openid);
+    }
+
+    @Override
+    public User save(User user) {
+        return userRepository.save(user);
+    }
 } 
